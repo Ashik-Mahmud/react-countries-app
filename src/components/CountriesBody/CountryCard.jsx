@@ -13,7 +13,7 @@ export const CountryCard = ({ name, flag, region }) => {
     </Card>
   );
 };
-const Card = styled.div`
+const Card = styled.a`
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
   padding: 1rem;
   cursor: pointer;
