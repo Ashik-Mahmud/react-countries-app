@@ -2,7 +2,7 @@
 
 This is simple react countries load application using React js Library. If have any query about my project please feel free to do that. Thanks
 
-# Using Technologies
+## Using Technologies
 
 - React Js Library
 - React Packages
@@ -10,13 +10,13 @@ This is simple react countries load application using React js Library. If have 
 - Terminal
   & more....
 
-# Required Features
+## Required Features
 
 - You will search countries & see as well details
 
-# Project link on about
+## Project link on about
 
-# Project preview Screenshot
+## Project preview Screenshot
 
 ![imageScreenshot](./preview.png)
 
