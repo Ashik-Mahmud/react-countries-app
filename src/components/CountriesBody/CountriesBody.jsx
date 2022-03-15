@@ -5,18 +5,26 @@ export const CountriesBody = ({ countries }) => {
   return (
     <>
       <Country>
-        {countries.map(({ name, flags, region }) => (
-          <CountryCard
-            key={name}
-            name={name}
-            region={region}
-            flag={flags.png}
-          />
-        ))}
+        {countries.status === 404 ? (
+          <Heading>Data Not Found.</Heading>
+        ) : (
+          countries.map(({ name, flags, region }) => (
+            <CountryCard
+              key={name}
+              name={name}
+              region={region}
+              flag={flags.png}
+            />
+          ))
+        )}
       </Country>
     </>
   );
 };
+const Heading = styled.h1`
+  color: #f00;
+  margin: 3rem 0rem;
+`;
 const Country = styled.section`
   width: min(100% - 2rem, 1170px);
   margin: 3rem auto;
