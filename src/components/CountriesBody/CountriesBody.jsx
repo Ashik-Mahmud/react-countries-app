@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { CountryCard } from "./CountryCard";
 export const CountriesBody = ({ countries }) => {
-  console.log(countries);
   return (
     <>
       <Country>

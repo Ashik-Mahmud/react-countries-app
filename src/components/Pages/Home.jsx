@@ -14,7 +14,7 @@ export const Home = () => {
   }, []);
   return (
     <>
-      <SearchBar />
+      <SearchBar setCountries={setCountries} />
       <CountriesBody countries={countries} />
     </>
   );

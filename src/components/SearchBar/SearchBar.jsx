@@ -1,6 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
-export const SearchBar = () => {
+export const SearchBar = ({ setCountries }) => {
+  const [value, setValue] = useState("");
+  const searchCountries = async () => {
+    const response = await fetch(`https://restcountries.com/v2/name/${value}`);
+    const data = await response.json();
+    setCountries(data);
+  };
   return (
     <>
       <SearchArea>
@@ -12,8 +18,10 @@ export const SearchBar = () => {
             placeholder="Search Country"
             name="search-countries"
             id="search-countries"
+            value={value}
+            onChange={(e) => setValue(e.target.value)}
           />
-          <button>Search</button>
+          <button onClick={searchCountries}>Search</button>
         </div>
       </SearchArea>
     </>
