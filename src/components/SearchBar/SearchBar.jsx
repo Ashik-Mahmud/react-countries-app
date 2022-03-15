@@ -3,9 +3,15 @@ import styled from "styled-components";
 export const SearchBar = ({ setCountries }) => {
   const [value, setValue] = useState("");
   const searchCountries = async () => {
-    const response = await fetch(`https://restcountries.com/v2/name/${value}`);
-    const data = await response.json();
-    setCountries(data);
+    if (!value) {
+      alert("field is required.");
+    } else {
+      const response = await fetch(
+        `https://restcountries.com/v2/name/${value}`
+      );
+      const data = await response.json();
+      setCountries(data);
+    }
   };
   return (
     <>

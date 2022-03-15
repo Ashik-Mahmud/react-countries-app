@@ -12,6 +12,7 @@ export const Home = () => {
   useEffect(() => {
     loadCountries();
   }, []);
+
   return (
     <>
       <SearchBar setCountries={setCountries} />
