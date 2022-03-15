@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 export const Header = () => {
   return (
@@ -7,13 +8,13 @@ export const Header = () => {
         <div className="logo">Logo</div>
         <ul>
           <li>
-            <a href="/">Home</a>
+            <NavLink to="/">Home</NavLink>
           </li>
           <li>
-            <a href="/">About</a>
+            <NavLink to="/about">About</NavLink>
           </li>
           <li>
-            <a href="/">Details</a>
+            <NavLink to="/details">Details</NavLink>
           </li>
         </ul>
       </Container>
@@ -28,4 +29,10 @@ const Container = styled.div`
   justify-content: space-between;
   margin-top: 1rem;
   margin-bottom: 1rem;
+  ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 1rem;
+  }
 `;

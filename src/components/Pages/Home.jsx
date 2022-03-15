@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { CountriesBody } from "../CountriesBody/CountriesBody";
-import { Header } from "../Header/Header";
 import { SearchBar } from "../SearchBar/SearchBar";
 export const Home = () => {
   const [countries, setCountries] = useState([]);
@@ -16,7 +15,6 @@ export const Home = () => {
 
   return (
     <>
-      <Header />
       <SearchBar setCountries={setCountries} />
       <CountriesBody countries={countries} />
     </>
