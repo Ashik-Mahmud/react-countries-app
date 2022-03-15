@@ -13,9 +13,6 @@ export const Header = () => {
           <li>
             <NavLink to="/about">About</NavLink>
           </li>
-          <li>
-            <NavLink to="/details">Details</NavLink>
-          </li>
         </ul>
       </Container>
     </>
@@ -28,7 +25,8 @@ const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
   ul {
     display: flex;
     align-items: center;

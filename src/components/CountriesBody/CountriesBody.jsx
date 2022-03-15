@@ -2,20 +2,19 @@ import React from "react";
 import styled from "styled-components";
 import { CountryCard } from "./CountryCard";
 export const CountriesBody = ({ countries }) => {
-  console.log(countries);
   return (
     <>
       <Country>
         {countries.status === 404 ? (
           <Heading>Data Not Found.</Heading>
         ) : (
-          countries.map(({ name, flags, region, alpha2Code }) => (
+          countries.map(({ name, flags, region, capital }) => (
             <CountryCard
               key={name}
               name={name}
               region={region}
               flag={flags.png}
-              slug={alpha2Code}
+              capital={capital}
             />
           ))
         )}

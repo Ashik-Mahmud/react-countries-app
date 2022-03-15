@@ -1,15 +1,11 @@
 import React from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-export const CountryCard = ({ name, flag, region, slug }) => {
-  const navigate = useNavigate();
-  const handleClick = () => {
-    navigate(`/details/${slug}`);
-  };
+export const CountryCard = ({ name, flag, region, capital }) => {
   return (
     <>
-      <Card to={"/details/" + slug}>
+      <Card to={"/details/" + capital}>
         <div className="flags">
           <img src={flag} alt="flags" />
         </div>
